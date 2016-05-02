@@ -1,0 +1,49 @@
+{
+  "name": "gulp-fs-cache",
+  "version": "0.1.0",
+  "description": "Gulp plugin for caching processed files to filesystem",
+  "keywords": [
+    "cache",
+    "cached",
+    "filesystem",
+    "fs",
+    "gulp",
+    "remember"
+  ],
+  "homepage": "https://github.com/bancek/gulp-fs-cache",
+  "bugs": {
+    "url": "https://github.com/bancek/gulp-fs-cache/issues"
+  },
+  "license": "MIT",
+  "author": "Luka Zakrajšek <luka@bancek.net>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bancek/gulp-fs-cache.git"
+  },
+  "scripts": {
+    "test": "xo && mocha --reporter spec"
+  },
+  "dependencies": {
+    "async": ">1.0.0",
+    "fs-extra": "^0.30.0",
+    "gulp-util": "^3.0.7",
+    "through2": ">=2.0.0 <3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.1",
+    "tmp": "0.0.28",
+    "xo": "^0.15.0"
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "no-eq-null": 0,
+      "eqeqeq": [
+        2,
+        "smart"
+      ]
+    }
+  }
+}
