@@ -3,7 +3,7 @@
 var crypto = require('crypto');
 var fs = require('fs');
 var path = require('path');
-var async = require('async');
+var sync = require('sync-each');
 var through = require('through2');
 var fsExtra = require('fs-extra');
 var gutil = require('gulp-util');
@@ -91,7 +91,7 @@ function gulpFsCache(basePath) {
   function restoreFlush(callback) {
     var _this = this;
 
-    async.each(cachedFiles, function (cachedFile, cb) {
+    sync.each(cachedFiles, function (cachedFile, cb) {
       var file = cachedFile.file;
       var checksum = cachedFile.checksum;
 
